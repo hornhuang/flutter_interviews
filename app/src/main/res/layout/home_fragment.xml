@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#FFFAFA">
+
+        <TextView
+            android:id="@+id/text_1"
+            android:layout_width="20dp"
+            android:layout_height="85dp"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/text_1"
+            android:background="@drawable/fennudexiaoniao"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/text_2"
+            android:layout_width="31dp"
+            android:layout_height="64dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/image_view"/>
+
+        <TextView
+            android:id="@+id/text_3"
+            android:layout_width="233dp"
+            android:layout_height="44dp"
+            android:layout_alignBottom="@+id/image_view"
+            android:layout_marginBottom="36dp"
+            android:layout_toRightOf="@id/text_2"
+            android:text="水中鱼之1999"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/text_4"
+            android:layout_width="233dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/text_3"
+            android:layout_marginTop="-36dp"
+            android:layout_toRightOf="@id/text_2"
+            android:text="Life's a struggle, Be willing to do, Be happy to bear."/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/text_5"
+        android:layout_below="@+id/title"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F2F2F2">
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_5"
+                />
+
+
+</RelativeLayout>

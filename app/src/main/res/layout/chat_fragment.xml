@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="#888888">
+
+    <LinearLayout
+        android:id="@+id/world_center_text_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="我的机器人"
+            android:textSize="20sp"
+            android:layout_gravity="left"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/world_top_1"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/world_center_text_0">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_top_view_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/world_center_text_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/world_top_1"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="我的好友"
+            android:textSize="20sp"
+            android:layout_gravity="left"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/world_top_2"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:orientation="vertical"
+        android:layout_below="@id/world_center_text_1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_top_view_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/world_center_text_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/world_top_2"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="我的黑名单"
+            android:textSize="20sp"
+            android:layout_gravity="left"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/world_top_3"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:orientation="vertical"
+        android:layout_below="@id/world_center_text_2">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_top_view_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/spinner_text"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<Spinner-->
+            <!--android:id="@+id/spinner_iRobot"-->
+            <!--android:scrollbars="none"-->
+            <!--android:background="#FFFFFF"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:scrollbarSize="100sp"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/text_1"-->
+            <!--android:layout_below="@id/spinner_iRobot"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="2dp"-->
+            <!--android:background="#888888"/>-->
+
+        <!--<Spinner-->
+            <!--android:id="@+id/spinner_iFriend"-->
+            <!--android:scrollbars="none"-->
+            <!--android:background="#FFFFFF"-->
+            <!--android:layout_below="@id/text_1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:scrollbarSize="30sp"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/text_2"-->
+            <!--android:layout_below="@id/spinner_iFriend"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="2dp"-->
+            <!--android:background="#888888"/>-->
+
+        <!--<Spinner-->
+            <!--android:id="@+id/spinner_iBlackList"-->
+            <!--android:scrollbars="none"-->
+            <!--android:background="#FFFFFF"-->
+            <!--android:layout_below="@id/text_2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:scrollbarSize="40sp"/>-->
+    <!--</RelativeLayout>-->
+
+
+
+
+
+</RelativeLayout>

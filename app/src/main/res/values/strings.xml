@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Drop</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="title_activity_text_chat">TextChatActivity</string>
+</resources>
