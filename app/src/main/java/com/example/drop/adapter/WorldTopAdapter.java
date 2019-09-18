@@ -11,8 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.drop.R;
-import com.example.drop.Web;
-import com.example.drop.WorldTop;
+import com.example.drop.classes.Web;
+import com.example.drop.classes.WorldTop;
 
 import java.util.List;
 

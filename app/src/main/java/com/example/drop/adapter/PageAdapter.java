@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.drop.Page;
+import com.example.drop.classes.Page;
 import com.example.drop.R;
 
 import java.util.List;

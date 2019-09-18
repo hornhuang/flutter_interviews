@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".classes.Home"></activity>
-        <activity android:name=".Web" />
+        <activity android:name=".classes.Web" />
         <activity android:name=".activity.ChatPageActivity" />
         <activity android:name=".HaiShuiYuTuJian" />
         <activity android:name=".ReDaiYuTuJian" />

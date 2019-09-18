@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 
 import com.example.drop.adapter.PageAdapter;
+import com.example.drop.classes.Page;
 
 import java.util.ArrayList;
 import java.util.List;

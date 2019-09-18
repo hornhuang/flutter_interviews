@@ -1,4 +1,4 @@
-package com.example.drop;
+package com.example.drop.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.drop.R;
 import com.example.drop.adapter.ChatAdapter;
 import com.example.drop.classes.Chat;
 

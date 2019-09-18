@@ -1,4 +1,4 @@
-package com.example.drop;
+package com.example.drop.classes;
 
 public class Robot {
     private int code; // code码
