@@ -1,8 +1,12 @@
 ## Container
-
-
-
-- ```dart
+- 官方文档：[https://docs.flutter.io/flutter/painting/TextStyle-class.html](https://docs.flutter.io/flutter/painting/TextStyle-class.html)
+- 基本属性
+  - ![](https://user-gold-cdn.xitu.io/2020/4/27/171bc231900916c6?w=861&h=365&f=png&s=81739)
+- TextSyle 参数：
+  - ![](https://user-gold-cdn.xitu.io/2020/4/27/171bc23f2f1a1344?w=852&h=314&f=png&s=70065)
+  - ![](https://user-gold-cdn.xitu.io/2020/4/27/171bc2442e90e0ad?w=851&h=212&f=png&s=44858)
+- 代码 
+  - ```dart
   class HomeContent extends StatelessWidget{
     @override
     Widget build(BuildContext context) {
