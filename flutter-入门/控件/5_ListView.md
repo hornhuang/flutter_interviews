@@ -189,7 +189,41 @@
 
 ### 二、动态 ListView
 
-- 传入 for 循环生成 list
+#### 2.1 外部封装数组
+
+- 代码：
+
+- ```dart
+  class HomeContent extends StatelessWidget {  
+  
+    //自定义方法
+    List<Widget> _getData(){
+      return [
+          ListTile(
+            title: Text("我是一个列表"),
+          ),
+           ListTile(
+            title: Text("我是一个列表"),
+          ),
+           ListTile(
+            title: Text("我是一个列表"),
+          )
+        ];
+    }
+  
+    @override
+    Widget build(BuildContext context) {    
+      // TODO: implement build
+      return ListView(
+        children: this._getData(),
+      );
+    }
+  }
+  ```
+
+
+
+#### 2.2 传入 for 循环生成 list
 
   - ```dart
     class HomeContent extends StatelessWidget {  
@@ -216,10 +250,94 @@
     }
     ```
 
-- 加载外部 List （网络下载 / 文件读取）
+#### 2.3 加载外部 List （网络下载 / 文件读取）
 
   - ```
+    import 'res/listData.dart';
     
+class HomeContent extends StatelessWidget {  
+    
+      //自定义方法
+      List<Widget> _getData(){      
+        var tempList=listData.map((value){
+            return ListTile(
+              leading:Image.network(value["imageUrl"]),
+              title:Text(value["title"]),
+              subtitle:Text(value["author"])
+            );
+        });
+        // map 后 格式为：('124124','124214')，需要转 List
+        return tempList.toList();
+      }
+    
+      @override
+      Widget build(BuildContext context) {    
+        // TODO: implement build
+        return ListView(
+          children: this._getData(),
+        );
+      }
+    }
     ```
+    
 
-  - 
+
+
+#### 2.4 采用 ListView.builder
+
+- ```dart
+  import 'res/listData.dart';
+  
+  class HomeContent extends StatelessWidget {  
+  
+    List list=new List();
+    HomeContent(){
+       for(var i=0;i<20;i++){
+          this.list.add('我是第$i条');
+        }
+    }  
+    @override
+    Widget build(BuildContext context) {    
+      // TODO: implement build
+      return ListView.builder(
+          itemCount:this.list.length,
+          itemBuilder:(context,index){
+            return ListTile(
+              title: Text(this.list[index]),
+            );
+          }
+      );
+    }
+  }
+  ```
+
+
+
+#### 2.5 采用 ListView.builder 读取外部数据
+
+- ```dart
+  import 'res/listData.dart';
+  
+  class HomeContent extends StatelessWidget {  
+  
+    //自定义方法
+    Widget _getListData(context,index){
+          return ListTile(           
+              title: Text(listData[index]["title"]),
+              leading:Image.network(listData[index]["imageUrl"]),          
+              subtitle:Text(listData[index]["author"])
+          );
+    }
+  
+    @override
+    Widget build(BuildContext context) {    
+      // TODO: implement build
+      return ListView.builder(
+          itemCount:listData.length,
+          itemBuilder:this._getListData
+      );
+    }
+  }
+  ```
+
+  
