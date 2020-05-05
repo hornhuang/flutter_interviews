@@ -433,3 +433,44 @@
 
 
 
+#### 2.4 使 Tabs 可以滑动
+
+- item 过多相互遮盖
+- ![](https://user-gold-cdn.xitu.io/2020/5/5/171e4e1fb7cadf41?w=438&h=596&f=png&s=51080)
+
+- isScrollable:true, //如果多个按钮的话可以滑动
+
+- ```dart
+  class _CategoryPageState extends State<CategoryPage> {
+    @override
+    Widget build(BuildContext context) {
+      return DefaultTabController(
+        length: 8,
+        child: Scaffold(
+          appBar: AppBar(
+  
+            backgroundColor: Colors.black26,
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Expanded(
+                    child:TabBar(
+                      isScrollable:true,  //如果多个按钮的话可以滑动
+                      indicatorColor:Colors.yellow,
+                      labelColor:Colors.yellow,
+                      unselectedLabelColor: Colors.white,
+                      indicatorSize:TabBarIndicatorSize.label ,
+                      ...
+                 ) ,
+                )
+              ],
+            ),
+            
+          ),
+          ...
+      );
+    }
+  }
+  ```
+
+- 
