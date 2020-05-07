@@ -444,7 +444,7 @@
                 children: <Widget>[
                   ButtonBar(
                     children: <Widget>[
-  
+    
                       RaisedButton(
                         child: Text('登录'),
                         color: Colors.blue,
@@ -530,4 +530,4 @@
   ```
 
 - 效果
-- ![](https://user-gold-cdn.xitu.io/2020/5/6/171e59116913d59e?w=544&h=189&f=png&s=40141)
+- ![](https://user-gold-cdn.xitu.io/2020/5/6/171e59116913d59e?w=544&h=189&f=png&s=40141) 
