@@ -1,32 +1,295 @@
-## TabBar  + tabContraller
+## Drawer 侧边栏
 
-- 解决 16 中，单独 TabBar 不同页面切换/上拉加载实现麻烦的问题
-
-
+- 侧边栏、以及侧边栏内容布局
 
 
 
-#### 1.1 新建 TabController 界面
+### 一、侧边栏
 
-- 需要继承自 StatefulWidget
+#### 1.1 找到侧边栏 Scaffold 组件
+
+- 由于 Tabs 内容在 body 里，所以 Scaffold 在 Tabs 中
+
+- ```dart
+  class _TabsState extends State<Tabs> {
+  
+    ...
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+          appBar: AppBar(
+            title: Text("Flutter App"),
+          ),
+          body: this._pageList[this._currentIndex],
+          bottomNavigationBar: BottomNavigationBar(
+            ...
+          ),
+          ...
+        );
+    }
+  }
+  ```
+
+
+
+
+
+#### 1.2 定义抽屉，左侧/右侧 侧边栏
+
+- 在 BottomNavigationBar 下边定义抽屉
+
+- ```dart
+  class _TabsState extends State<Tabs> {
+  
+    ...
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+          appBar: AppBar(
+            title: Text("Flutter App"),
+          ),
+          body: this._pageList[this._currentIndex],
+          bottomNavigationBar: BottomNavigationBar(
+            ...
+          ),
+  
+          drawer: Drawer(
+            ...
+          ),
+          endDrawer: Drawer(
+            child: Text('右侧侧边栏'),
+          ),
+        );
+    }
+  }
+  ```
+
+- 添加右侧侧边栏
+
+- ```dart
+          endDrawer: Drawer(
+            child: Text('右侧侧边栏'),
+          ),
+  ```
+
+- 
+
+
+
+#### 1.3 左侧侧边栏内容
+
+- 列表形式展现
+
+- ```dart
+  class _TabsState extends State<Tabs> {
+  
+    ...
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+          appBar: AppBar(
+            title: Text("Flutter App"),
+          ),
+          body: this._pageList[this._currentIndex],
+          bottomNavigationBar: BottomNavigationBar(
+            ...
+          ),
+  
+          drawer: Drawer(
+            child: Column(
+              children: <Widget>[
+  
+                ...
+                ListTile(
+                  leading: CircleAvatar(
+                    child: Icon(Icons.home)
+                  ),
+                  title: Text("我的空间"),
+                ),
+                  Divider(),// 列表间划线
+                 ListTile(
+                  leading: CircleAvatar(
+                    child: Icon(Icons.people)
+                  ),
+                  title: Text("用户中心"),
+                ),
+                Divider(),
+                ListTile(
+                  leading: CircleAvatar(
+                    child: Icon(Icons.settings)
+                  ),
+                  title: Text("设置中心"),
+                ),
+                  Divider(),
+              ],
+            ),
+  
+  
+          ),
+          endDrawer: Drawer(
+            child: Text('右侧侧边栏'),
+          ),
+        );
+    }
+  }
+  ```
+
+- 
+
+
+
+#### 1.4 给侧边栏添加头部布局
+
+- 属性：
+- ![](https://user-gold-cdn.xitu.io/2020/5/5/171e52706d724102?w=647&h=132&f=png&s=15902)
+
+- 使用 Row 使其铺满整个屏幕
+
+- ```dart
+  class _TabsState extends State<Tabs> {
+  
+    ...
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+          appBar: AppBar(
+            title: Text("Flutter App"),
+          ),
+          body: this._pageList[this._currentIndex],
+          bottomNavigationBar: BottomNavigationBar(
+            ...
+          ),
+  
+          drawer: Drawer(
+            child: Column(
+              children: <Widget>[
+  
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: DrawerHeader(
+                        child: Text("你好flutter"),
+                        decoration:BoxDecoration(
+                          color: Colors.yellow,
+                          image: DecorationImage(
+                            image: NetworkImage("https://www.itying.com/images/flutter/2.png"),
+                            fit:BoxFit.cover,
+                          )
+                          
+                        )
+                      )
+                    )
+                  ],
+                ),
+                ListTile(
+                  ...
+                ),
+              ],
+            ),
+  
+          ),
+          endDrawer: Drawer(
+            child: Text('右侧侧边栏'),
+          ),
+        );
+    }
+  }
+  ```
+
+
+
+
+
+#### 1.5 UserAccountsDrawerHeader 高级侧边栏头部
+
+- 自带很多常用主题、属性
+- ![](https://user-gold-cdn.xitu.io/2020/5/5/171e52cb202dc150?w=644&h=180&f=png&s=26133)
+
+- ```dart
+  class _TabsState extends State<Tabs> {
+  
+  ...
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+          ...
+          drawer: Drawer(
+            child: Column(
+              children: <Widget>[
+  
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: UserAccountsDrawerHeader(
+                        accountName:Text("大地老师"),
+                        accountEmail: Text("dadi@itying.com"),
+                        currentAccountPicture: CircleAvatar(
+                          backgroundImage: NetworkImage("https://www.itying.com/images/flutter/3.png"),                        
+                        ),
+                        decoration:BoxDecoration(                        
+                          image: DecorationImage(
+                            image: NetworkImage("https://www.itying.com/images/flutter/2.png"),
+                            fit:BoxFit.cover,
+                          )
+                          
+                        ),
+                       otherAccountsPictures: <Widget>[
+                         Image.network("https://www.itying.com/images/flutter/4.png"),
+                         Image.network("https://www.itying.com/images/flutter/5.png"),
+                       ],
+                      )
+                    )
+                  ],
+                ),
+                ListTile(
+                  ...
+                ),
+              ],
+            ),
+  
+  
+          ),
+          endDrawer: Drawer(
+            child: Text('右侧侧边栏'),
+          ),
+        );
+    }
+  }
+  ```
+
+- 效果
+
+- ![](https://user-gold-cdn.xitu.io/2020/5/5/171e5337560f0140?w=296&h=519&f=png&s=105954)
+
+
+
+
+
+
+
+### 二、点击侧边栏跳转
+
+
+
+
+
+
+
+#### 2.1 新建 User.dart 文件
+
+- 一个简单的页面，作为跳转的目的地
 
 - ```dart
   import 'package:flutter/material.dart';
   
-  class TabBarControllerPage extends StatefulWidget {
-    TabBarControllerPage({Key key}) : super(key: key);
-  
-    _TabBarControllerPageState createState() => _TabBarControllerPageState();
-  }
-  
-  class _TabBarControllerPageState extends State<TabBarControllerPage> with SingleTickerProviderStateMixin {
+  class UserPage extends StatelessWidget {
+    const UserPage({Key key}) : super(key: key);
   
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         appBar: AppBar(
-          title: Text("TabBarControllerPage"),
-          
+          title: Text("用户中心"),
         ),
       );
     }
@@ -39,155 +302,42 @@
 
 
 
-#### 1.2 配置路由
-
-- 引入 tabBarController.dart 组件
+#### 2.2 跳转功能
 
 - ```dart
-  import '../pages/TabBarController.dart';
-  
-  
-  //配置路由
-  final routes={
-        '/':(context)=>Tabs(),
-        '/appBarDemo':(context)=>AppBarDemoPage(),   
-        '/tabBarController':(context)=>TabBarControllerPage(),     
-        
-  };
-  ```
-
-- 
-
-
-
-
-
-#### 1.3 在 Home 中跳转到待测试页面
-
-- （非必要，只是为了测试）
-
-- ```dart
-  class _HomePageState extends State<HomePage> {
-    @override
-    Widget build(BuildContext context) {
-      return Center(
-        child: Row(       
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ...
-            RaisedButton(
-                child: Text("TabController定义顶部tab切换 "),
-                onPressed: () {
-                  //路由跳转
-                  Navigator.pushNamed(context, '/tabBarController');
-                 
-            })
-          ],
-        ),
-      );
-    }
-  }
-  ```
-
-
-
-
-
-#### 1.5 实现 SingleTickerProviderStateMixin 接口
-
-- ```dart
-  class _TabBarControllerPageState extends State<TabBarControllerPage> with SingleTickerProviderStateMixin {
-  
-    TabController _tabController;
-  
-    @override
-    void dispose() {   //生命周期函数
-      // TODO: implement dispose
-      super.dispose();
-      _tabController.dispose();
-    }
-  
-    @override
-    void initState() {   //生命周期函数
-      // TODO: implement initState
-      super.initState();
-      _tabController=new TabController(
-        vsync: this,
-        length: 2
-      );
-      // _tabController.addListener((){
-  
-      //   print(_tabController.index);     
-      // });
-    }  
-  
-  
+  class _TabsState extends State<Tabs> {
+    ...
     @override
     Widget build(BuildContext context) {
       return Scaffold(
-        appBar: AppBar(
-          title: Text("TabBarControllerPage"),
-          bottom: TabBar(
-            controller: this._tabController,  //注意
-            tabs: <Widget>[
-              Tab(text:"热销"),
-              Tab(text:"推荐"),
-            ],
+          ...
+          drawer: Drawer(
+            child: Column(
+              children: <Widget>[
+                ...
+                  Divider(),
+                 ListTile(
+                  leading: CircleAvatar(
+                    child: Icon(Icons.people)
+                  ),
+                  title: Text("用户中心"),
+                  onTap: (){
+                    Navigator.of(context).pop();  //隐藏侧边栏
+                    Navigator.pushNamed(context, '/user');
+                  },
+                ),
+                ...
+              ],
+            ),
+  
+  
           ),
-        ),
-        body: TabBarView(
-          controller: this._tabController,  //注意
-          children: <Widget>[
-            Center(child: Text("热销")),
-            Center(child: Text("推荐"))
-            
-          ],
-        ),
-      );
+          endDrawer: Drawer(
+            child: Text('右侧侧边栏'),
+          ),
+        );
     }
   }
-  ```
-
-- 首先定义 TabController
-
-- ![](https://user-gold-cdn.xitu.io/2020/5/5/171e4fe2252de3d5?w=594&h=330&f=png&s=19486)
-
-- 组件初始化时赋值 initState() 初始化操作，传入 this 和 tab 的 长度
-- ![image-20200505212146644](C:\Users\30797\AppData\Roaming\Typora\typora-user-images\image-20200505212146644.png)
-
-- 实现我们的 TabBar 过程和非 Cotroller 的普通写法一样
-- ![](https://user-gold-cdn.xitu.io/2020/5/5/171e5018a374d922?w=581&h=612&f=png&s=32761)
-- 需要注意，将 TabBar 和 TabBarView 里对 controller 赋值
-
-- ```dart
-  controller: this._tabController,  //注意
-  ```
-
-- 优势：在 TabController 里调用 addListener() 监听 TabBar 的改变，然后可以做一系列操作
-
-- ![](https://user-gold-cdn.xitu.io/2020/5/5/171e5042764e4693?w=615&h=503&f=png&s=230918)
-
-
-
-
-
-
-
-#### 1.6 监听组件销毁的 dispose() 方法
-
-- 可以在这里释放 controller 对象，或其它操作
-
-- ```dart
-  class _TabBarControllerPageState extends State<TabBarControllerPage> with SingleTickerProviderStateMixin {
-  
-    TabController _tabController;
-  
-    @override
-    void dispose() {   //生命周期函数
-      // TODO: implement dispose
-      super.dispose();
-      _tabController.dispose();
-    }
   ```
 
 - 
