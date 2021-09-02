@@ -14,7 +14,7 @@
 
 <div>
   <a href="https://github.com/CarGuo/gsy_github_app_flutter">
-    <img align="left" src="https://github-readme-stats.anuraghazra1.vercel.app/api/pin/?username=CarGuo&repo=gsy_github_app_flutter&show_icons=true&title_color=ffffff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515" />
+    <img align="right" src="https://github-readme-stats.anuraghazra1.vercel.app/api/pin/?username=CarGuo&repo=gsy_github_app_flutter&show_icons=true&title_color=ffffff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515" />
   </a>
 </div>
 
@@ -37,21 +37,16 @@
 优秀的开原框架、组件库
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=jonataslaw&repo=getx&show_owner=true)](https://github.com/jonataslaw/getx)
-<div>
-  <a href="https://github.com/jonataslaw/getx">
-    <img align="left" src="https://github-readme-stats.anuraghazra1.vercel.app/api/pin/?username=jonataslaw&repo=getx&show_icons=true&title_color=ffffff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515" />
-  </a>
-</div>
 
 <div>
   <a href="https://github.com/bytedance/flutter_ume">
-    <img align="left" src="https://github-readme-stats.anuraghazra1.vercel.app/api/pin/?username=bytedance&repo=flutter_ume&show_icons=true&title_color=ffffff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515" />
+    <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api/pin/?username=bytedance&repo=flutter_ume&show_icons=true&title_color=ffffff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515" />
   </a>
 </div>
 
 <div>
   <a href="https://github.com/alibaba/flutter_boost">
-    <img align="left" src="https://github-readme-stats.anuraghazra1.vercel.app/api/pin/?username=alibaba&repo=flutter_boost&show_icons=true&title_color=ffffff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515" />
+    <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api/pin/?username=alibaba&repo=flutter_boost&show_icons=true&title_color=ffffff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515" />
   </a>
 </div>
 
