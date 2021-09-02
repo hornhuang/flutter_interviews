@@ -107,10 +107,11 @@ Engine(C/C++)：用C++编写，实现了Flutter的核心库，包括Dart虚拟�
 </br>
 
 # # 参考文献
+本仓库的建设参考了一些优秀的文章，这里表示诚挚的感谢 😘
 
-> [Flutter Engine层核心逻辑梳理](https://zhuanlan.zhihu.com/p/340729824)
-> [为什么要掌握 Flutter？](https://zhuanlan.zhihu.com/p/73145822)
-> [Google发布Flutter 2.0正式版，支持全平台程序构建](https://zhuanlan.zhihu.com/p/354634474)
+> [Flutter Engine层核心逻辑梳理](https://zhuanlan.zhihu.com/p/340729824)</br>
+> [为什么要掌握 Flutter？](https://zhuanlan.zhihu.com/p/73145822)</br>
+> [Google发布Flutter 2.0正式版，支持全平台程序构建](https://zhuanlan.zhihu.com/p/354634474)</br>
 
 </br>
 
