@@ -10,9 +10,9 @@
 - [全平台](https://github.com/hornhuang/flutter_interviews/blob/master/README.md#-%E5%85%A8%E5%B9%B3%E5%8F%B0)
   - [gsy_github_app_flutter](https://github.com/hornhuang/flutter_interviews/blob/master/README.md#flutter-folio)
 - [框架、脚手架](https://github.com/hornhuang/flutter_interviews/blob/master/README.md#-%E6%A1%86%E6%9E%B6%E8%84%9A%E6%89%8B%E6%9E%B6)
-  - [flutter_deer](https://github.com/hornhuang/flutter_interviews/blob/master/README.md#getx)
-  - [flutter_deer](https://github.com/hornhuang/flutter_interviews/blob/master/README.md#flutter_ume)
-  - [flutter_deer](https://github.com/hornhuang/flutter_interviews/blob/master/README.md#flutter_boost)
+  - [getx](https://github.com/hornhuang/flutter_interviews/blob/master/README.md#getx)
+  - [flutter_ume](https://github.com/hornhuang/flutter_interviews/blob/master/README.md#flutter_ume)
+  - [flutter_boost](https://github.com/hornhuang/flutter_interviews/blob/master/README.md#flutter_boost)
 
 #### [framework 层相关](https://github.com/hornhuang/flutter_interviews/blob/master/README.md#-framework)
 
