@@ -17,7 +17,9 @@
 
 #### [# engine 相关](https://github.com/hornhuang/flutter_interviews/blob/master/README.md#-engine)
 - [# 编译引擎](https://github.com/hornhuang/flutter_interviews/blob/master/README.md#-%E7%BC%96%E8%AF%91)
+  - [搭建Flutter Engine源码编译环境](http://gityuan.com/2019/08/03/flutter_engine_setup/)
 - [# 源码设计](https://github.com/hornhuang/flutter_interviews/blob/master/README.md#-%E6%BA%90%E7%A0%81)
+  - [Flutter源码阅读分析：引擎初始化与启动](https://blog.csdn.net/dongzhong1990/article/details/105678124)
 
 # # 优秀项目
 
