@@ -36,6 +36,7 @@
 
 优秀的开原框架、组件库
 
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=jonataslaw&repo=getx&show_owner=true)](https://github.com/jonataslaw/getx)
 <div>
   <a href="https://github.com/jonataslaw/getx">
     <img align="left" src="https://github-readme-stats.anuraghazra1.vercel.app/api/pin/?username=jonataslaw&repo=getx&show_icons=true&title_color=ffffff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515" />
@@ -63,10 +64,10 @@ framework 层有关的文章，包括架构源码分析等干货汇总
 flutter 引擎相关湿货，从源码架构到编译打包，自定义开发物美价廉，客官来点？
 
 #### 编译
-- ![搭建Flutter Engine源码编译环境](http://gityuan.com/2019/08/03/flutter_engine_setup/)
+- [搭建Flutter Engine源码编译环境](http://gityuan.com/2019/08/03/flutter_engine_setup/)
 
 #### 源码
-- ![Flutter源码阅读分析：引擎初始化与启动](https://blog.csdn.net/dongzhong1990/article/details/105678124)
+- [Flutter源码阅读分析：引擎初始化与启动](https://blog.csdn.net/dongzhong1990/article/details/105678124)
 
 # MIT License
 
