@@ -89,6 +89,9 @@ Google发布了 Flutter 2.0的正式版本，至2018年Flutter 1.0版本发布�
 # # framework
 Framework(Dart)：该层是Dart库，google实现一套用Dart语言开发的基础库，包括Widget，手势，绘图，动画等，有Material和Cupertino风格。这里是 framework 层有关的文章，包括架构源码分析等干货汇总。
 
+## # 源码
+- [flutter Java 类源码功能及使用文档](https://api.flutter.dev/javadoc)
+
 </br>
 </br>
 
@@ -101,7 +104,9 @@ Engine(C/C++)：用C++编写，实现了Flutter的核心库，包括Dart虚拟�
 </br>
 
 ## # 源码
+- [Flutter Engine API 功能与使用文档](https://engine.chinmaygarde.com/classflutter_1_1_android_shell_holder.html#details)
 - [Flutter源码阅读分析：引擎初始化与启动](https://blog.csdn.net/dongzhong1990/article/details/105678124)
+- 
 
 </br>
 </br>
