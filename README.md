@@ -100,6 +100,7 @@ Engine(C/C++)：用C++编写，实现了Flutter的核心库，包括Dart虚拟�
 
 ## # 编译
 - [搭建Flutter Engine源码编译环境](http://gityuan.com/2019/08/03/flutter_engine_setup/)
+- [官方文档架构概述 ：Flutter architectural overview](https://flutter.dev/docs/resources/architectural-overview)
 
 </br>
 
