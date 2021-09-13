@@ -109,6 +109,11 @@ Engine(C/C++)：用C++编写，实现了Flutter的核心库，包括Dart虚拟�
 - [Flutter源码阅读分析：引擎初始化与启动](https://blog.csdn.net/dongzhong1990/article/details/105678124)
 - [AliFlutter圖片解決方案與優化](https://blog.cti.app/archives/6663)
 
+## # 渲染
+
+- [【淘系技术】超详解析Flutter渲染引擎|业务想创新，不了解底层原理怎么行？](https://juejin.cn/post/6844904155266416653)
+- [Flutter渲染机制—GPU线程](http://gityuan.com/2019/06/16/flutter_gpu_draw/)
+
 </br>
 </br>
 
